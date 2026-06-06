@@ -22,7 +22,8 @@ jobs:
         - name: run a linux command
           run: ls -la
     
-      deploy3:
+
+   deploy3:
       runs-on: ubuntu-latest
       needs: deploy2
       steps:
@@ -41,3 +42,50 @@ jobs:
 
         - name: run a linux command
           run: ls -la
+
+
+# name: CI/CD Pipeline
+
+# on:
+#   push:
+#     branches:
+#       - cicd
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: run a linux command
+#         run: cat index.html
+
+#   deploy2:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: run a linux command
+#         run: ls -la
+
+#   deploy3:
+#     runs-on: ubuntu-latest
+#     needs: deploy2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: run a linux command
+#         run: cat index.html
+
+#   deploy4:
+#     runs-on: ubuntu-latest
+#     needs: deploy3
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: run a linux command
+#         run: ls -la
